@@ -44,9 +44,7 @@ class NextEventView: UIView {
         CV.layer.borderWidth = 0.5
         CV.layer.borderColor =  UIColor(named: "blackBorder")?.cgColor
         
-        
 
-        
         CV.frame = self.bounds
         CV.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
