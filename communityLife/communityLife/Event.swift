@@ -26,11 +26,13 @@ class Event: NSObject
     var toiletFacBool: Bool
     var parkBool: Bool
     var topicID: Int
+    var topicName: String
+    var needsTickets: Bool
     
     
     
     //MARK: Initialisation
-    init?(eventDate:String, locationShort: String, locationLong: String, time: String, descriptionString: String, eventImage:UIImage? ,attendingBool: Bool, wheelBool: Bool, toiletFacBool: Bool, parkBool: Bool, topicID: Int )
+    init?(eventDate:String, locationShort: String, locationLong: String, time: String, descriptionString: String, eventImage:UIImage? ,attendingBool: Bool, wheelBool: Bool, toiletFacBool: Bool, parkBool: Bool, topicID: Int,topicName: String, needsTickets: Bool)
     {
         
 
@@ -45,6 +47,8 @@ class Event: NSObject
         self.toiletFacBool = toiletFacBool
         self.parkBool = parkBool
         self.topicID = topicID
+        self.topicName = topicName
+        self.needsTickets = needsTickets
         
         
         

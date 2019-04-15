@@ -17,7 +17,7 @@ class NextEventView: UIView {
     @IBOutlet weak var LocationText: UILabel!
     @IBOutlet weak var ImageView: UIImageView!
     
-    let eventOne = Event(eventDate: "01/06/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2 )
+    let eventOne = Event(eventDate: "01/06/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2,topicName: "Soccer", needsTickets: true )
     
     
     override init(frame: CGRect) {
@@ -40,9 +40,9 @@ class NextEventView: UIView {
         LocationText.text = eventOne?.locationLong
         EventTime.text = eventOne?.time
         ImageView.image = eventOne?.eventImage
-        CV.layer.cornerRadius = 15
-        CV.layer.borderWidth = 0.5
-        CV.layer.borderColor =  UIColor(named: "blackBorder")?.cgColor
+        CV.layer.cornerRadius = 4.0
+        CV.layer.borderWidth = 1
+        CV.layer.borderColor =  UIColor.lightGray.cgColor
         
 
         CV.frame = self.bounds

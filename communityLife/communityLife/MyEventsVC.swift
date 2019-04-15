@@ -17,6 +17,11 @@ class MyEventsVC: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+    }
 
 
 }
