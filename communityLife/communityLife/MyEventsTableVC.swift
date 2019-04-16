@@ -20,6 +20,7 @@ class MyEventsTableVC: UITableViewController {
 //        navigationItem.title = "My Events 📆"
         loadSampleEvents()
         
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         //self.tableView.separatorStyle = .none
     }
@@ -85,7 +86,8 @@ class MyEventsTableVC: UITableViewController {
         return eventItems.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "EventItemTableViewCell"
@@ -96,19 +98,30 @@ class MyEventsTableVC: UITableViewController {
         {
             fatalError("The dequeued cell is not an instance of MyEventsCellVC.")
         }
+        
 
         cell.contentView.backgroundColor = UIColor.clear
+         let whiteRoundedView : UIView = UIView(frame: CGRect(x: 5, y: 15, width: self.view.frame.size.width - 10, height: 285))
         
-        let whiteRoundedView : UIView = UIView(frame: CGRect(x: 10, y: 15, width: self.view.frame.size.width - 20, height: 285))
+        //let gradientLayer = CAGradientLayer()
+        //gradientLayer.colors = [UIColor(named: "lightRed")?.cgColor as Any, UIColor(named: "lightPurple")?.cgColor as Any]
+        //gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        //gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        //gradientLayer.frame = whiteRoundedView.bounds
+        //        whiteRoundedView.layer.addSublayer(gradientLayer)
+
         
         whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
+        
+
         whiteRoundedView.layer.masksToBounds = false
         whiteRoundedView.layer.cornerRadius = 4.0
-        whiteRoundedView.layer.borderWidth = 1
+        whiteRoundedView.layer.borderWidth = 1.5
+        //whiteRoundedView.layer.borderColor = UIColor(named: "lightRed")?.cgColor
         whiteRoundedView.layer.borderColor = UIColor.lightGray.cgColor
         
-        //whiteRoundedView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        //whiteRoundedView.layer.shadowOpacity = 0.2
+        whiteRoundedView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        whiteRoundedView.layer.shadowOpacity = 0.1
         
         cell.contentView.addSubview(whiteRoundedView)
         cell.contentView.sendSubviewToBack(whiteRoundedView)
@@ -144,40 +157,40 @@ class MyEventsTableVC: UITableViewController {
         let newDateTwo = "07/06/2019"
         let newDateThree = "24/06/2019"
         
-        guard let eventOne = Event(eventDate: newDateOne, locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: photo1, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1, topicName: "Soccer", needsTickets: true  ) else {
+        guard let eventOne = Event(eventDate: newDateOne, locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: photo1, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1, topicName: "Soccer ⚽️", needsTickets: true  ) else {
             fatalError("Unable to instantiate eventOne")
         }
         
-        guard let eventSeven = Event(eventDate: newDateOne, locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "8.00pm", descriptionString: "Rolling Stones Concert", eventImage: photo7, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music", needsTickets: true  ) else {
+        guard let eventSeven = Event(eventDate: newDateOne, locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "8.00pm", descriptionString: "Rolling Stones Concert", eventImage: photo7, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true  ) else {
             fatalError("Unable to instantiate eventSeven")
         }
         
-        guard let eventFour = Event(eventDate: newDateOne, locationShort: "Thomond Park", locationLong: "Thomond Park, Limerick", time: "5.30pm", descriptionString: "Munster vs Ospreys", eventImage: photo6, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2, topicName: "Rugby",needsTickets: true ) else {
+        guard let eventFour = Event(eventDate: newDateOne, locationShort: "Thomond Park", locationLong: "Thomond Park, Limerick", time: "5.30pm", descriptionString: "Munster vs Ospreys", eventImage: photo6, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2, topicName: "Rugby 🏉",needsTickets: true ) else {
             fatalError("Unable to instantiate eventFour")
         }
         
-        guard let eventTwo = Event(eventDate: newDateTwo, locationShort: "UCD Campus", locationLong: "UCD Campus, Dublin", time: "1.30pm", descriptionString: "UCD vs Shamrock Rovers", eventImage: photo2, attendingBool: false, wheelBool: true, toiletFacBool: false, parkBool: true, topicID: 1,topicName: "Soccer", needsTickets: true  ) else {
+        guard let eventTwo = Event(eventDate: newDateTwo, locationShort: "UCD Campus", locationLong: "UCD Campus, Dublin", time: "1.30pm", descriptionString: "UCD vs Shamrock Rovers", eventImage: photo2, attendingBool: false, wheelBool: true, toiletFacBool: false, parkBool: true, topicID: 1,topicName: "Soccer ⚽️", needsTickets: true  ) else {
             fatalError("Unable to instantiate eventTwo")
         }
         
-        guard let eventFive = Event(eventDate: newDateTwo, locationShort: "UCD Campus", locationLong: "UCD Campus, Dublin", time: "1.00pm", descriptionString: "Dundrum Special Olympics Blitz", eventImage: photo3, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1,topicName: "Sports", needsTickets: false ) else {
+        guard let eventFive = Event(eventDate: newDateTwo, locationShort: "UCD Campus", locationLong: "UCD Campus, Dublin", time: "1.00pm", descriptionString: "Dundrum Special Olympics Blitz", eventImage: photo3, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1,topicName: "Sports 🏎", needsTickets: false ) else {
             fatalError("Unable to instantiate eventFive")
         }
         
-        guard let eventEight = Event(eventDate: newDateTwo, locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "4.00pm", descriptionString: "Ireland vs New Zealand", eventImage: photo5, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2,topicName: "Rugby", needsTickets: true  ) else {
+        guard let eventEight = Event(eventDate: newDateTwo, locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "4.00pm", descriptionString: "Ireland vs New Zealand", eventImage: photo5, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2,topicName: "Rugby 🏉", needsTickets: true  ) else {
             fatalError("Unable to instantiate eventEight")
         }
         
-        guard let eventThree = Event(eventDate: newDateThree, locationShort: "RDS Donnybrook", locationLong: "RDS Donnybrook, Dublin", time: "2.30pm", descriptionString: "Leinster vs Edinburgh", eventImage: photo4, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2, topicName: "Rugby", needsTickets: true ) else {
+        guard let eventThree = Event(eventDate: newDateThree, locationShort: "RDS Donnybrook", locationLong: "RDS Donnybrook, Dublin", time: "2.30pm", descriptionString: "Leinster vs Edinburgh", eventImage: photo4, attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2, topicName: "Rugby 🏉", needsTickets: true ) else {
             fatalError("Unable to instantiate eventThree")
         }
         
         
-        guard let eventNine = Event(eventDate: newDateThree, locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "6.30pm", descriptionString: "The Eagles Concert", eventImage: photo9, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music", needsTickets: true  ) else {
+        guard let eventNine = Event(eventDate: newDateThree, locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "6.30pm", descriptionString: "The Eagles Concert", eventImage: photo9, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true  ) else {
             fatalError("Unable to instantiate eventNine")
         }
         
-        guard let eventSix = Event(eventDate: "20/07/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "7.30pm", descriptionString: "Elton John Concert", eventImage: photo8, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music", needsTickets: true ) else {
+        guard let eventSix = Event(eventDate: "20/07/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "7.30pm", descriptionString: "Elton John Concert", eventImage: photo8, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true ) else {
             fatalError("Unable to instantiate eventNine")
         }
         

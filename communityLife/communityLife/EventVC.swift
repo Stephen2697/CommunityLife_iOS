@@ -58,19 +58,15 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
             ticketLabel.textColor = UIColor(named: "black")
         }
         
+        
+        
     }
     
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.prefersLargeTitles = false
-
-    }
     
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         let grabRefToNavigationController = navigationController
-        grabRefToNavigationController?.popViewController(animated: true)
+        grabRefToNavigationController?.popViewController(animated: false)
     }
     
 
@@ -82,7 +78,7 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
             alert = UIAlertController(title: "Tickets Required", message: "To be allowed into this event, you will need tickets", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                self.performSegue(withIdentifier: "BackToMyEvents", sender: nil)
+//                self.performSegue(withIdentifier: "BackToMyEvents", sender: nil)
             }
             
             alert.addAction(action1)
@@ -96,7 +92,7 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
             alert = UIAlertController(title: "Event Saved", message: "This event has been saved to the 'My Events' section", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                self.performSegue(withIdentifier: "BackToMyEvents", sender: nil)
+                //self.performSegue(withIdentifier: "BackToMyEvents", sender: nil)
             }
             
             alert.addAction(action1)

@@ -26,6 +26,8 @@
 		942145EF226085B200641D37 /* NextEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942145EE226085B200641D37 /* NextEventView.xib */; };
 		942145F12260978300641D37 /* MyEventsCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145F02260978300641D37 /* MyEventsCellVC.swift */; };
 		942145F322609BC900641D37 /* MyEventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145F222609BC900641D37 /* MyEventsTableVC.swift */; };
+		942145FB226551DD00641D37 /* NextEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */; };
+		942145FD226556DD00641D37 /* NextEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FC226556DD00641D37 /* NextEventsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		942145EE226085B200641D37 /* NextEventView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextEventView.xib; sourceTree = "<group>"; };
 		942145F02260978300641D37 /* MyEventsCellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsCellVC.swift; sourceTree = "<group>"; };
 		942145F222609BC900641D37 /* MyEventsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableVC.swift; sourceTree = "<group>"; };
+		942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		942145FC226556DD00641D37 /* NextEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,21 +125,23 @@
 		942145AA225B678900641D37 /* communityLife */ = {
 			isa = PBXGroup;
 			children = (
-				942145AB225B678900641D37 /* AppDelegate.swift */,
+				942145B1225B678900641D37 /* Main.storyboard */,
+				942145DE225F93CB00641D37 /* launcherPageVC.swift */,
 				942145AD225B678900641D37 /* MyActivitiesVC.swift */,
 				942145AF225B678900641D37 /* MyEventsVC.swift */,
+				942145FC226556DD00641D37 /* NextEventsViewController.swift */,
+				942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */,
 				942145F222609BC900641D37 /* MyEventsTableVC.swift */,
 				942145F02260978300641D37 /* MyEventsCellVC.swift */,
-				942145E6226071C400641D37 /* AddCategoryVC.swift */,
 				942145E82260720500641D37 /* EventVC.swift */,
-				942145DE225F93CB00641D37 /* launcherPageVC.swift */,
-				942145EA226077FF00641D37 /* CategoryEventsVC.swift */,
-				942145B1225B678900641D37 /* Main.storyboard */,
 				942145EC2260833400641D37 /* NextEventView.swift */,
 				942145EE226085B200641D37 /* NextEventView.xib */,
 				942145E02260690900641D37 /* Event.swift */,
 				942145E222606D1900641D37 /* Category.swift */,
 				942145E42260709600641D37 /* SwiftGif.swift */,
+				942145EA226077FF00641D37 /* CategoryEventsVC.swift */,
+				942145E6226071C400641D37 /* AddCategoryVC.swift */,
+				942145AB225B678900641D37 /* AppDelegate.swift */,
 				942145B4225B678B00641D37 /* Assets.xcassets */,
 				942145B6225B678B00641D37 /* LaunchScreen.storyboard */,
 				942145B9225B678B00641D37 /* Info.plist */,
@@ -293,7 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942145FB226551DD00641D37 /* NextEventCollectionViewCell.swift in Sources */,
 				942145E92260720500641D37 /* EventVC.swift in Sources */,
+				942145FD226556DD00641D37 /* NextEventsViewController.swift in Sources */,
 				942145B0225B678900641D37 /* MyEventsVC.swift in Sources */,
 				942145E52260709600641D37 /* SwiftGif.swift in Sources */,
 				942145F322609BC900641D37 /* MyEventsTableVC.swift in Sources */,
