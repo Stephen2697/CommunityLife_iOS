@@ -143,6 +143,7 @@
                                             <outlet property="DateLabel" destination="5ge-Gi-A68" id="jIF-mF-7bg"/>
                                             <outlet property="EventLabel" destination="aSg-Lk-w1g" id="Z2L-iN-JFL"/>
                                             <outlet property="LocationLabel" destination="QRI-1V-nH6" id="HKd-bA-Pku"/>
+                                            <segue destination="NHg-9w-ow5" kind="show" identifier="ShowDetailNextEvent" id="IQ4-b9-ifS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -156,7 +157,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Activities 🚀" largeTitleDisplayMode="always" id="nyM-YO-gL0"/>
+                    <navigationItem key="navigationItem" title="My Activities 🚀" id="nyM-YO-gL0"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="A71-7j-MdU" id="rw3-Iz-sTV"/>
@@ -164,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960.8" y="459.60591133004925"/>
+            <point key="canvasLocation" x="1961" y="436"/>
         </scene>
         <!--Event Name-->
         <scene sceneID="7zs-Bg-Ose">
@@ -305,6 +306,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="AccessWCFacilityIcon" destination="iou-GJ-Ecd" id="feN-Cf-0Qh"/>
                         <outlet property="CategoryLabel" destination="Yim-QZ-8Qs" id="VC0-SS-yfj"/>
@@ -560,8 +562,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t5t-e9-wfw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Activities" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="N6E-SO-tgd">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="N6E-SO-tgd">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -610,8 +613,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DnH-h0-8nq"/>
         <segue reference="Y52-tF-aaf"/>
+        <segue reference="IQ4-b9-ifS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.87716564119999996" green="0.01331189114" blue="0.28797959109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
