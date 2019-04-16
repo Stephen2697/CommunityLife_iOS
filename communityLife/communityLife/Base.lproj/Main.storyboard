@@ -98,7 +98,7 @@
                                 <color key="backgroundColor" red="0.87978005410000004" green="0.19086322189999999" blue="0.2941020131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A71-7j-MdU">
-                                <rect key="frame" x="0.0" y="134" width="375" height="581"/>
+                                <rect key="frame" x="0.0" y="134" width="375" height="266"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="lightRed"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zTm-ho-OpD">
@@ -109,7 +109,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="eventsCell" id="ylV-hb-rgM" customClass="NextEventCollectionViewCell" customModule="communityLife" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="200"/>
+                                        <rect key="frame" x="0.0" y="33" width="275" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="275" height="200"/>
