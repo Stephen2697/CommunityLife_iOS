@@ -28,25 +28,32 @@ class NextEventCollectionViewCell: UICollectionViewCell {
         if let event = event {
             //ImageView.image = event.eventImage
             EventLabel.text = event.descriptionString
+            LocationLabel.text = event.locationLong
             DateLabel.text = event.eventDate
-            TimeLabel.text = event.time
+//            TimeLabel.text = event.time
         }
         else
         {
             //ImageView.image = nil
             EventLabel.text = "nothing"
+            LocationLabel.text = "nothing"
             DateLabel.text = "nothing"
-            TimeLabel.text = "nothing"
+//            TimeLabel.text = "nothing"
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = 3.0
-        layer.shadowRadius = 2
-        layer.shadowOpacity = 0.8
-        layer.shadowOffset = CGSize(width: 5, height: 10)
+        self.layer.cornerRadius = 12.0
+        layer.shadowRadius = 1.5
+        layer.shadowOpacity = 0.1
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+//        layer.borderColor = UIColor.clear.cgColor
+//        layer.borderWidth = 2
+        layer.backgroundColor = UIColor(named: "lightBlue")?.cgColor
         self.clipsToBounds = false
+        
+
     }
     
 }

@@ -18,7 +18,7 @@ class NextEventsViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       
+        navigationController?.navigationBar.prefersLargeTitles = true
 //        let screenSize = UIScreen.main.bounds.size
 //        let cellWidth = floor(screenSize.width * cellScaling)
 //        let cellHeight = floor(screenSize.height * cellScaling)
@@ -50,7 +50,13 @@ extension NextEventsViewController : UICollectionViewDataSource
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsCell", for: indexPath) as! NextEventCollectionViewCell
         
-        cell.event = eventItems[indexPath.item]
+        cell.EventLabel.text = eventItems[indexPath.item].descriptionString
+        cell.LocationLabel.text = eventItems[indexPath.item].locationLong
+        cell.DateLabel.text = "\(eventItems[indexPath.item].time), \(eventItems[indexPath.item].eventDate)"
+        
+        
+        
+//        cell.layer.backgroundColor = UIColor(named: "lightRed")?.cgColor
         
         return cell
     }
