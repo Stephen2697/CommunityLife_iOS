@@ -46,6 +46,7 @@ extension NextEventsViewController : UICollectionViewDataSource
         return eventItems.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsCell", for: indexPath) as! NextEventCollectionViewCell
@@ -53,13 +54,37 @@ extension NextEventsViewController : UICollectionViewDataSource
         cell.EventLabel.text = eventItems[indexPath.item].descriptionString
         cell.LocationLabel.text = eventItems[indexPath.item].locationLong
         cell.DateLabel.text = "\(eventItems[indexPath.item].time), \(eventItems[indexPath.item].eventDate)"
+        cell.contentView.backgroundColor = UIColor.clear
+        cell.layer.cornerRadius = 12.0
+        cell.layer.shadowRadius = 1.5
+        cell.layer.shadowOpacity = 0.1
+        cell.layer.shadowOffset = CGSize(width: -1, height: 1)
+        cell.layer.borderColor = UIColor.clear.cgColor
+        cell.layer.borderWidth = 2
         
-        
-        
+        cell.clipsToBounds = false
+        cell.layer.insertSublayer(gradient(frame: cell.bounds, startColor: eventItems[indexPath.item].startColor, endColor: eventItems[indexPath.item].endColor ), at:0)
+       
 //        cell.layer.backgroundColor = UIColor(named: "lightRed")?.cgColor
         
         return cell
     }
+    
+
+    func gradient(frame:CGRect, startColor: UIColor, endColor: UIColor) -> CAGradientLayer {
+        let layer = CAGradientLayer()
+        layer.frame = frame
+        layer.startPoint = CGPoint(x: 0, y: 0)
+        layer.endPoint = CGPoint(x: 1, y: 1)
+        print(":: \(startColor)")
+        //layer.colors = [UIColor(named: "lightBlue")?.cgColor as Any, UIColor(named: "lightPurple")?.cgColor as Any]
+        layer.colors = [startColor.cgColor as Any, endColor.cgColor as Any]
+        layer.cornerRadius = 12.0
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 2
+        return layer
+    }
+    
 }
 
 extension NextEventsViewController : UIScrollViewDelegate, UICollectionViewDelegate

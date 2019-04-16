@@ -17,7 +17,7 @@ class NextEventView: UIView {
     @IBOutlet weak var LocationText: UILabel!
     @IBOutlet weak var ImageView: UIImageView!
     
-    let eventOne = Event(eventDate: "01/06/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2,topicName: "Soccer", needsTickets: true )
+    let eventOne = Event(eventDate: "01/06/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2,topicName: "Soccer", needsTickets: true,startColor: UIColor(named: "lightBlue")!, endColor: UIColor(named: "lightPurple")! )
     
     
     override init(frame: CGRect) {

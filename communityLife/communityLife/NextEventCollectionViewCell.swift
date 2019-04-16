@@ -44,16 +44,46 @@ class NextEventCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         self.layer.cornerRadius = 12.0
         layer.shadowRadius = 1.5
         layer.shadowOpacity = 0.1
         layer.shadowOffset = CGSize(width: -1, height: 1)
-//        layer.borderColor = UIColor.clear.cgColor
-//        layer.borderWidth = 2
-        layer.backgroundColor = UIColor(named: "lightBlue")?.cgColor
-        self.clipsToBounds = false
+        layer.borderColor = UIColor.clear.cgColor
+        layer.borderWidth = 2
         
-
+        self.clipsToBounds = false
+        self.layer.insertSublayer(gradient(frame: self.bounds), at:0)
+        
+        addShadow(LabelToShadow: EventLabel)
+        addShadow(LabelToShadow: LocationLabel)
+        addShadow(LabelToShadow: DateLabel)
+        
+        
     }
+    
+    func addShadow(LabelToShadow: UILabel) {
+        LabelToShadow.layer.shadowColor = UIColor.black.cgColor
+        LabelToShadow.layer.shadowRadius = 3.0
+        LabelToShadow.layer.shadowOpacity = 1.0
+        LabelToShadow.layer.shadowOffset = CGSize(width: 0, height: 0)
+        LabelToShadow.layer.masksToBounds = false
+        
+    }
+    func gradient(frame:CGRect) -> CAGradientLayer {
+        let layer = CAGradientLayer()
+        layer.frame = frame
+        layer.startPoint = CGPoint(x: 0, y: 0)
+        layer.endPoint = CGPoint(x: 1, y: 1)
+        //print(event?.eventDate)
+        //layer.colors = [UIColor(named: "lightBlue")?.cgColor as Any, UIColor(named: "lightPurple")?.cgColor as Any]
+        //layer.colors = [event?.startColor.cgColor as Any, event?.endColor.cgColor as Any]
+        layer.cornerRadius = 12.0
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 2
+        return layer
+    }
+    
+    
     
 }

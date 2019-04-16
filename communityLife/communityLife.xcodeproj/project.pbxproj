@@ -28,6 +28,7 @@
 		942145F322609BC900641D37 /* MyEventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145F222609BC900641D37 /* MyEventsTableVC.swift */; };
 		942145FB226551DD00641D37 /* NextEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */; };
 		942145FD226556DD00641D37 /* NextEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FC226556DD00641D37 /* NextEventsViewController.swift */; };
+		944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944C0D9B2266135F000C5C13 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		942145F222609BC900641D37 /* MyEventsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableVC.swift; sourceTree = "<group>"; };
 		942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		942145FC226556DD00641D37 /* NextEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventsViewController.swift; sourceTree = "<group>"; };
+		944C0D9B2266135F000C5C13 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				942145E6226071C400641D37 /* AddCategoryVC.swift */,
 				942145AB225B678900641D37 /* AppDelegate.swift */,
 				942145B4225B678B00641D37 /* Assets.xcassets */,
+				944C0D9B2266135F000C5C13 /* Colors.xcassets */,
 				942145B6225B678B00641D37 /* LaunchScreen.storyboard */,
 				942145B9225B678B00641D37 /* Info.plist */,
 			);
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */,
 				942145B8225B678B00641D37 /* LaunchScreen.storyboard in Resources */,
 				942145B5225B678B00641D37 /* Assets.xcassets in Resources */,
 				942145EF226085B200641D37 /* NextEventView.xib in Resources */,
