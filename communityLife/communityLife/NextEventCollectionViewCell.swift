@@ -26,17 +26,17 @@ class NextEventCollectionViewCell: UICollectionViewCell {
     
     private func updateUI() {
         if let event = event {
-            ImageView.image = event.eventImage
+            //ImageView.image = event.eventImage
             EventLabel.text = event.descriptionString
             DateLabel.text = event.eventDate
             TimeLabel.text = event.time
         }
         else
         {
-            ImageView.image = nil
-            EventLabel.text = nil
-            DateLabel.text = nil
-            TimeLabel.text = nil
+            //ImageView.image = nil
+            EventLabel.text = "nothing"
+            DateLabel.text = "nothing"
+            TimeLabel.text = "nothing"
         }
     }
     

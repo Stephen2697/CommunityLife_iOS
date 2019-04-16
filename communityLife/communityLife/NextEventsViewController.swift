@@ -18,7 +18,7 @@ class NextEventsViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //loadSampleEvents()
+       
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScaling)
         let cellHeight = floor(screenSize.height * cellScaling)
@@ -31,40 +31,8 @@ class NextEventsViewController: UIViewController {
         collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
         
         collectionView?.dataSource = self
-        
+        collectionView?.delegate = self
     }
-
-    
-//    private func loadSampleEvents()
-//    {
-//
-//        //load in event images
-//        let photo1 = UIImage(named: "IrelandFootball")
-//        let photo8 = UIImage(named: "EltonJ")
-//        let photo9 = UIImage(named: "TheEagles")
-//
-//        //create sample dates
-//        let newDateOne = "01/06/2019"
-//        let newDateThree = "24/06/2019"
-//
-//        guard let eventOne = Event(eventDate: newDateOne, locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: photo1, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1, topicName: "Soccer ⚽️", needsTickets: true  ) else {
-//            fatalError("Unable to instantiate eventOne")
-//        }
-//
-//
-//        guard let eventNine = Event(eventDate: newDateThree, locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "6.30pm", descriptionString: "The Eagles Concert", eventImage: photo9, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true  ) else {
-//            fatalError("Unable to instantiate eventNine")
-//        }
-//
-//        guard let eventSix = Event(eventDate: "20/07/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "7.30pm", descriptionString: "Elton John Concert", eventImage: photo8, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true ) else {
-//            fatalError("Unable to instantiate eventNine")
-//        }
-//
-//        eventItems = [eventOne, eventSix, eventNine]
-//
-//    } //end loadsample()
-    
-    
 }
 
 
@@ -87,3 +55,20 @@ extension NextEventsViewController : UICollectionViewDataSource
         return cell
     }
 }
+
+extension NextEventsViewController : UIScrollViewDelegate, UICollectionViewDelegate
+{
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+    {
+        let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        let roundedIndex = round(index)
+        
+        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
+    }
+}
+
