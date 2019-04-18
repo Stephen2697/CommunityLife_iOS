@@ -8,42 +8,19 @@
 
 import UIKit
 
-class NextEventsViewController: UIViewController {
+class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    //var eventItems = [Event]()
     var eventItems = Event.fetchEvents()
     let cellScaling : CGFloat = 0.6
     var index:Int = 0
-    
-    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-//        let screenSize = UIScreen.main.bounds.size
-//        let cellWidth = floor(screenSize.width * cellScaling)
-//        let cellHeight = floor(screenSize.height * cellScaling)
-//        
-//        let insetX = (view.bounds.width - cellWidth) / 2.0
-//        let insetY = (view.bounds.height - cellHeight) / 2.0
-//        
-//        let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-//        collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-        
         collectionView?.dataSource = self
         collectionView?.delegate = self
-        
-//        for i in 0..<eventItems.count
-//        {
-//            print("[\(i)]----------------------\n")
-//            print("start::\(eventItems[i].startColor)")
-//            print("end:: \(eventItems[i].endColor)")
-//            print("----------------------\n")
-//            print("----------------------\n\n")
-//        }
         
         
     }
@@ -107,6 +84,12 @@ extension NextEventsViewController : UICollectionViewDataSource
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsCell", for: indexPath) as! NextEventCollectionViewCell
         
+        if let topLayer = cell.layer.sublayers?.first, topLayer is CAGradientLayer
+        {
+            topLayer.removeFromSuperlayer()
+            
+        }
+        
         cell.clipsToBounds = false
         cell.layer.cornerRadius = 12.0
         cell.layer.borderColor = UIColor.white.cgColor
@@ -115,41 +98,26 @@ extension NextEventsViewController : UICollectionViewDataSource
         cell.EventLabel.text = eventItems[indexPath.item].descriptionString
         cell.LocationLabel.text = eventItems[indexPath.item].locationLong
         cell.DateLabel.text = "\(eventItems[indexPath.item].time), \(eventItems[indexPath.item].eventDate)"
-        
-        
-        //testing gradient here
-        //cell.layer.insertSublayer(gradient(frame: cell.bounds, startColor: eventItems[indexPath.item].startColor, endColor: eventItems[indexPath.item].endColor ), at:0)
+  
+        print("\n\n\nNumber of Layers: \(cell.layer.sublayers?.count ?? 0)\n\n-------------------------------\n\n")
         
         var gradientLayer = CAGradientLayer()
-        
+
         if let existingLayer = (cell.layer.sublayers?.compactMap { $0 as? CAGradientLayer })?.first {
             gradientLayer = existingLayer
-            index += 1
-            //print("***\n\(index) - top layer exists\n***")
         }
-        
+
         gradientLayer.frame = cell.bounds
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         gradientLayer.colors = [eventItems[indexPath.item].startColor.cgColor as Any, eventItems[indexPath.item].endColor.cgColor as Any]
-        //gradientLayer.colors = [eventItems[indexPath.item].startColor as Any, eventItems[indexPath.item].endColor as Any]
-        
+
         gradientLayer.cornerRadius = 12.0
         gradientLayer.borderColor = UIColor.white.cgColor
         gradientLayer.borderWidth = 2
-        cell.layer.insertSublayer(gradientLayer, at:0)
-        
-        
-        if let sublayers = cell.layer.sublayers
-        {
-            for sublayer in sublayers
-            {
-                    print("***\n\(sublayer)***\n")
-                
-            }
-        }
 
-        
+        cell.layer.insertSublayer(gradientLayer, at: 0)
+
         return cell
     }
     
@@ -176,7 +144,7 @@ extension NextEventsViewController : UICollectionViewDataSource
     
 }
 
-extension NextEventsViewController : UIScrollViewDelegate, UICollectionViewDelegate
+extension NextEventsViewController : UIScrollViewDelegate
 {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
     {

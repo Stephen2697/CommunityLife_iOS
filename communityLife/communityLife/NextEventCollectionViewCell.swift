@@ -42,45 +42,54 @@ class NextEventCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        self.layer.cornerRadius = 12.0
-        layer.shadowRadius = 1.5
-        layer.shadowOpacity = 0.1
-        layer.shadowOffset = CGSize(width: -1, height: 1)
-        layer.borderColor = UIColor.clear.cgColor
-        layer.borderWidth = 2
-        
-        self.clipsToBounds = false
-        self.layer.insertSublayer(gradient(frame: self.bounds), at:0)
-        
-        addShadow(LabelToShadow: EventLabel)
-        addShadow(LabelToShadow: LocationLabel)
-        addShadow(LabelToShadow: DateLabel)
-        
-        
-    }
-    
-    func addShadow(LabelToShadow: UILabel) {
-        LabelToShadow.layer.shadowColor = UIColor.black.cgColor
-        LabelToShadow.layer.shadowRadius = 3.0
-        LabelToShadow.layer.shadowOpacity = 1.0
-        LabelToShadow.layer.shadowOffset = CGSize(width: 0, height: 0)
-        LabelToShadow.layer.masksToBounds = false
-        
-    }
-    func gradient(frame:CGRect) -> CAGradientLayer {
-        let layer = CAGradientLayer()
-        layer.frame = frame
-        layer.startPoint = CGPoint(x: 0, y: 0)
-        layer.endPoint = CGPoint(x: 1, y: 1)
-        layer.cornerRadius = 12.0
-        layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 2
-        return layer
-    }
-    
-    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//         print("\n\nhi: \(self.layer.sublayers?.count ?? 0)\n\n-------------------------------")
+//        
+////        if let topLayer = self.layer.sublayers?.first
+////        {
+////            topLayer.removeFromSuperlayer()
+////
+////        }
+//        
+//        self.layer.cornerRadius = 12.0
+//        layer.shadowRadius = 1.5
+//        layer.shadowOpacity = 0.1
+//        layer.shadowOffset = CGSize(width: -1, height: 1)
+//        layer.borderColor = UIColor.clear.cgColor
+//        layer.borderWidth = 2
+//        
+//        self.clipsToBounds = false
+//
+//        
+//        let newLayer = gradient(frame: self.bounds)
+//        
+//        self.layer.insertSublayer(newLayer, at:0)
+//        
+//        addShadow(LabelToShadow: EventLabel)
+//        addShadow(LabelToShadow: LocationLabel)
+//        addShadow(LabelToShadow: DateLabel)
+//        
+//    }
+//    
+//    func addShadow(LabelToShadow: UILabel) {
+//        LabelToShadow.layer.shadowColor = UIColor.black.cgColor
+//        LabelToShadow.layer.shadowRadius = 3.0
+//        LabelToShadow.layer.shadowOpacity = 1.0
+//        LabelToShadow.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        LabelToShadow.layer.masksToBounds = false
+//        
+//    }
+//    
+//    func gradient(frame:CGRect) -> CALayer {
+//        let layer = CALayer()
+//        layer.frame = frame
+//        layer.cornerRadius = 12.0
+//        layer.borderColor = UIColor.white.cgColor
+//        layer.borderWidth = 2
+//        return layer
+//    }
+//    
+//    
     
 }
