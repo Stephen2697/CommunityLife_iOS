@@ -14,6 +14,9 @@ class NextEventsViewController: UIViewController {
     //var eventItems = [Event]()
     var eventItems = Event.fetchEvents()
     let cellScaling : CGFloat = 0.6
+    var index:Int = 0
+    
+    
     
     override func viewDidLoad()
     {
@@ -32,6 +35,22 @@ class NextEventsViewController: UIViewController {
         
         collectionView?.dataSource = self
         collectionView?.delegate = self
+        
+//        for i in 0..<eventItems.count
+//        {
+//            print("[\(i)]----------------------\n")
+//            print("start::\(eventItems[i].startColor)")
+//            print("end:: \(eventItems[i].endColor)")
+//            print("----------------------\n")
+//            print("----------------------\n\n")
+//        }
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -88,39 +107,72 @@ extension NextEventsViewController : UICollectionViewDataSource
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsCell", for: indexPath) as! NextEventCollectionViewCell
         
+        cell.clipsToBounds = false
+        cell.layer.cornerRadius = 12.0
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 2
+        
         cell.EventLabel.text = eventItems[indexPath.item].descriptionString
         cell.LocationLabel.text = eventItems[indexPath.item].locationLong
         cell.DateLabel.text = "\(eventItems[indexPath.item].time), \(eventItems[indexPath.item].eventDate)"
-        cell.contentView.backgroundColor = UIColor.clear
-        cell.layer.cornerRadius = 12.0
-        cell.layer.shadowRadius = 1.5
-        cell.layer.shadowOpacity = 0.1
-        cell.layer.shadowOffset = CGSize(width: -1, height: 1)
-        cell.layer.borderColor = UIColor.clear.cgColor
-        cell.layer.borderWidth = 2
         
-        cell.clipsToBounds = false
-        cell.layer.insertSublayer(gradient(frame: cell.bounds, startColor: eventItems[indexPath.item].startColor, endColor: eventItems[indexPath.item].endColor ), at:0)
-       
-//        cell.layer.backgroundColor = UIColor(named: "lightRed")?.cgColor
+        
+        //testing gradient here
+        //cell.layer.insertSublayer(gradient(frame: cell.bounds, startColor: eventItems[indexPath.item].startColor, endColor: eventItems[indexPath.item].endColor ), at:0)
+        
+        var gradientLayer = CAGradientLayer()
+        
+        if let existingLayer = (cell.layer.sublayers?.compactMap { $0 as? CAGradientLayer })?.first {
+            gradientLayer = existingLayer
+            index += 1
+            //print("***\n\(index) - top layer exists\n***")
+        }
+        
+        gradientLayer.frame = cell.bounds
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [eventItems[indexPath.item].startColor.cgColor as Any, eventItems[indexPath.item].endColor.cgColor as Any]
+        //gradientLayer.colors = [eventItems[indexPath.item].startColor as Any, eventItems[indexPath.item].endColor as Any]
+        
+        gradientLayer.cornerRadius = 12.0
+        gradientLayer.borderColor = UIColor.white.cgColor
+        gradientLayer.borderWidth = 2
+        cell.layer.insertSublayer(gradientLayer, at:0)
+        
+        
+        if let sublayers = cell.layer.sublayers
+        {
+            for sublayer in sublayers
+            {
+                    print("***\n\(sublayer)***\n")
+                
+            }
+        }
+
         
         return cell
     }
     
 
-    func gradient(frame:CGRect, startColor: UIColor, endColor: UIColor) -> CAGradientLayer {
-        let layer = CAGradientLayer()
-        layer.frame = frame
-        layer.startPoint = CGPoint(x: 0, y: 0)
-        layer.endPoint = CGPoint(x: 1, y: 1)
-        print(":: \(startColor)")
-        //layer.colors = [UIColor(named: "lightBlue")?.cgColor as Any, UIColor(named: "lightPurple")?.cgColor as Any]
-        layer.colors = [startColor.cgColor as Any, endColor.cgColor as Any]
-        layer.cornerRadius = 12.0
-        layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 2
-        return layer
-    }
+    
+//    func gradient(frame:CGRect, startColor: UIColor, endColor: UIColor) -> CAGradientLayer {
+//        var gradientLayer = CAGradientLayer()
+//
+//        if let existingLayer = (layer.sublayers?.compactMap { $0 as? CAGradientLayer })?.first {
+//            gradientLayer = existingLayer
+//            print("***top layer exists\n**")
+//        }
+//
+//        layer.frame = frame
+//        layer.startPoint = CGPoint(x: 0, y: 0)
+//        layer.endPoint = CGPoint(x: 1, y: 1)
+//
+//        layer.colors = [startColor.cgColor as Any, endColor.cgColor as Any]
+//        layer.cornerRadius = 12.0
+//        layer.borderColor = UIColor.white.cgColor
+//        layer.borderWidth = 2
+//        return layer
+//    }
     
 }
 

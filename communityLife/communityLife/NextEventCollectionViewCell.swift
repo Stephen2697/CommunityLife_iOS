@@ -75,9 +75,6 @@ class NextEventCollectionViewCell: UICollectionViewCell {
         layer.frame = frame
         layer.startPoint = CGPoint(x: 0, y: 0)
         layer.endPoint = CGPoint(x: 1, y: 1)
-        //print(event?.eventDate)
-        //layer.colors = [UIColor(named: "lightBlue")?.cgColor as Any, UIColor(named: "lightPurple")?.cgColor as Any]
-        //layer.colors = [event?.startColor.cgColor as Any, event?.endColor.cgColor as Any]
         layer.cornerRadius = 12.0
         layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 2

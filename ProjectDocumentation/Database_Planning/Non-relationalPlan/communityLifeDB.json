@@ -1,0 +1,76 @@
+{
+    "jsonID" : "--counter of requests--",
+    "createdOn" : "--timestamp of retrieval request--",
+    "users" : {
+        "--uniqueID1--" : {
+            "fname" : "Stephen",
+            "sname" : "Alger",
+            "group" : "--ref to group--",
+            "dob" : "01/01/1997",
+            "status" : "--ref to status--"
+        },
+        "--uniqueID2--" : {
+            "firstName" : "Amy Rose",
+            "lastName" : "McNabb",
+            "communityGroup" : "--ref to group--",
+            "dob" : "01/01/1997",
+            "status" : "--ref to status--"
+        },
+        "--uniqueID3--" : {
+            "firstName" : "Cian",
+            "lastName" : "Twyford",
+            "communityGroup" : "--ref to group--",
+            "dob" : "01/01/1997",
+            "status" : "--ref to status--"
+        },
+        "--uniqueID4--" : {
+            "firstName" : "Adam",
+            "lastName" : "Ryan",
+            "communityGroup" : "--ref to group--",
+            "dob" : "01/01/1997",
+            "status" : "--ref to status--"
+        }
+    },
+    "topic" : {
+        "--uniqueTopicID1--" : {
+            "topicName" : "Guitar",
+            "topicVisual" : "--visual stored here--"
+        },
+        "--uniqueTopicID2--" : {
+            "topicName" : "Football",
+            "topicVisual" : "--visual stored here--"
+        },
+        "--uniqueTopicID3--" : {
+            "topicName" : "Rugby",
+            "topicVisual" : "--visual stored here--"
+        } 
+    },
+    "event" : {
+        "--uniqueEventID1--" : {
+            "eventName" : "Guitar",
+            "eventTIMESTAMP" : "--eventTIMESTAMP stored here--"
+        },
+        "--uniqueEventID2--" : {
+            "eventName" : "Football",
+            "eventTIMESTAMP" : "--eventTIMESTAMP stored here--"
+        },
+        "--uniqueEventID3--" : {
+            "eventName" : "Rugby",
+            "eventTIMESTAMP" : "--eventTIMESTAMP stored here--"
+        } 
+    },
+    "favouritePrefs" : [{
+        "userID" : "--user id--",
+        "topicID" : "--event id--"
+    },{
+        "userID" : "--user id--",
+        "topicID" : "--event id--"
+    }],
+    "attendingPrefs" : [{
+        "userID" : "--user id--",
+        "eventID" : "--event id--"
+    },{
+        "userID" : "--user id--",
+        "eventID" : "--event id--"
+    }]
+}
