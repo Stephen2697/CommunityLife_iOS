@@ -23,7 +23,7 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var AccessWCFacilityIcon: UIImageView!
     @IBOutlet weak var DateTimeLabel: UILabel!
     @IBOutlet weak var CategoryLabel: UILabel!
-    @IBOutlet weak var buttonLabel: UIButton!
+    @IBOutlet weak var buttonAttend: UIButton!
     
     
     
@@ -35,6 +35,7 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
         
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.title = ToDisplayEventItem?.topicName
+        
         EventImage.image = ToDisplayEventItem?.eventImage
         EventLabel.text = ToDisplayEventItem?.descriptionString
         CategoryLabel.text = ToDisplayEventItem?.topicName
@@ -48,18 +49,30 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
         if ToDisplayEventItem?.needsTickets == true
         {
             ticketLabel.text = "This Event Requires Tickets 🎟"
-            buttonLabel.setTitle("Get Tickets", for: .normal)
             ticketLabel.textColor = UIColor(named: "red")
-        
+            
         }
         else
         {
             ticketLabel.text = "No Tickets Required"
-            buttonLabel.setTitle("Add to Calendar", for: .normal)
             ticketLabel.textColor = UIColor(named: "black")
         }
         
-        
+        if (ToDisplayEventItem?.attendingBool == true)
+        {
+            buttonAttend.backgroundColor = UIColor(named:"lightGreen")
+            buttonAttend.setTitle("I Am Going!", for: .normal)
+            
+            
+            
+        }
+        else
+        {
+            buttonAttend.backgroundColor = UIColor(named:"red")
+            buttonAttend.setTitle("I Am Not Going!", for: .normal)
+            
+        }
+
         
     }
     

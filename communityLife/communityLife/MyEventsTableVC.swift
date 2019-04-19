@@ -12,11 +12,12 @@ import os.log
 class MyEventsTableVC: UITableViewController {
     
     //create array of objects of class type: foodItem
-    var eventItems = [Event]()
+    var eventItems = Event.fetchEvents()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        getOnlyAttendingEvents()
 
         //navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -134,7 +135,15 @@ class MyEventsTableVC: UITableViewController {
     
     private func getOnlyAttendingEvents()
     {
-        
+        var index = 0
+        for event in eventItems {
+            if event.attendingBool == false{
+                eventItems.remove(at: index)
+            }
+            else {
+                index += 1
+            }
+        }
     }
     
     

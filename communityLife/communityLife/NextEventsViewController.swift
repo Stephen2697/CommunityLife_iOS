@@ -17,8 +17,6 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     @IBOutlet weak var viewTitle: UILabel!
     
     var eventItems = Event.fetchEvents()
-    let cellScaling : CGFloat = 0.6
-    var index:Int = 0
     
     override func viewDidLoad()
     {
