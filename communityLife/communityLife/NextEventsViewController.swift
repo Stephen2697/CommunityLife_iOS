@@ -15,6 +15,7 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var upcomingViewTitle: UILabel!
     @IBOutlet weak var viewTitle: UILabel!
+    @IBOutlet weak var horizontalLine: UIView!
     
     var eventItems = Event.fetchEvents()
     
@@ -27,7 +28,10 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
         addShadow(LabelToShadow: viewTitle)
         collectionView?.dataSource = self
         collectionView?.delegate = self
-        
+        todayDateLabel.textColor = UIColor.white.withAlphaComponent(0.5)
+        upcomingViewTitle.textColor = UIColor.white
+        viewTitle.textColor = UIColor.white
+        horizontalLine.backgroundColor = UIColor.white
         
     }
     
@@ -88,7 +92,10 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
         gradientLayer.frame = upcomingEvent.bounds
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        gradientLayer.colors = [UIColor(named: "lightRed")?.cgColor as Any, UIColor(named: "red")?.cgColor as Any]
+        //gradientLayer.colors = [UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0).cgColor as Any, UIColor(red:0.20, green:0.20, blue:0.59, alpha:1.0).cgColor as Any]
+        gradientLayer.colors = [UIColor(red:0.20, green:0.20, blue:0.59, alpha:1.0).cgColor as Any, UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0).cgColor as Any]
+        
+
         
         upcomingEvent.layer.insertSublayer(gradientLayer, at: 0)
         
