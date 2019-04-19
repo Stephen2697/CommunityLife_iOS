@@ -14,10 +14,7 @@ class NextEventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var EventLabel: UILabel!
     @IBOutlet weak var LocationLabel: UILabel!
     @IBOutlet weak var DateLabel: UILabel!
-    @IBOutlet weak var TimeLabel: UILabel!
-    @IBOutlet weak var ImageView: UIImageView!
-    @IBOutlet weak var BlurView: UIView!
-    
+
     var event : Event? {
         didSet {
             self.updateUI()
@@ -31,6 +28,9 @@ class NextEventCollectionViewCell: UICollectionViewCell {
             LocationLabel.text = event.locationLong
             DateLabel.text = event.eventDate
 //            TimeLabel.text = event.time
+            
+            
+            
         }
         else
         {
@@ -40,6 +40,16 @@ class NextEventCollectionViewCell: UICollectionViewCell {
             DateLabel.text = "nothing"
 //            TimeLabel.text = "nothing"
         }
+    }
+    
+    func addShadow(LabelToShadow: UILabel) {
+        
+        LabelToShadow.layer.shadowColor = UIColor.black.cgColor
+        LabelToShadow.layer.shadowRadius = 3.0
+        LabelToShadow.layer.shadowOpacity = 1.0
+        LabelToShadow.layer.shadowOffset = CGSize(width: 0, height: 0)
+        LabelToShadow.layer.masksToBounds = false
+
     }
     
 //    override func layoutSubviews() {
@@ -72,14 +82,7 @@ class NextEventCollectionViewCell: UICollectionViewCell {
 //        
 //    }
 //    
-//    func addShadow(LabelToShadow: UILabel) {
-//        LabelToShadow.layer.shadowColor = UIColor.black.cgColor
-//        LabelToShadow.layer.shadowRadius = 3.0
-//        LabelToShadow.layer.shadowOpacity = 1.0
-//        LabelToShadow.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        LabelToShadow.layer.masksToBounds = false
-//        
-//    }
+//
 //    
 //    func gradient(frame:CGRect) -> CALayer {
 //        let layer = CALayer()

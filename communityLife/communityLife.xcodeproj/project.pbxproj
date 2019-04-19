@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		942145AC225B678900641D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145AB225B678900641D37 /* AppDelegate.swift */; };
-		942145AE225B678900641D37 /* MyActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145AD225B678900641D37 /* MyActivitiesVC.swift */; };
 		942145B0225B678900641D37 /* MyEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145AF225B678900641D37 /* MyEventsVC.swift */; };
 		942145B3225B678900641D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942145B1225B678900641D37 /* Main.storyboard */; };
 		942145B5225B678B00641D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942145B4225B678B00641D37 /* Assets.xcassets */; };
@@ -22,13 +21,12 @@
 		942145E7226071C400641D37 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145E6226071C400641D37 /* AddCategoryVC.swift */; };
 		942145E92260720500641D37 /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145E82260720500641D37 /* EventVC.swift */; };
 		942145EB226077FF00641D37 /* CategoryEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145EA226077FF00641D37 /* CategoryEventsVC.swift */; };
-		942145ED2260833400641D37 /* NextEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145EC2260833400641D37 /* NextEventView.swift */; };
-		942145EF226085B200641D37 /* NextEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942145EE226085B200641D37 /* NextEventView.xib */; };
 		942145F12260978300641D37 /* MyEventsCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145F02260978300641D37 /* MyEventsCellVC.swift */; };
 		942145F322609BC900641D37 /* MyEventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145F222609BC900641D37 /* MyEventsTableVC.swift */; };
 		942145FB226551DD00641D37 /* NextEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */; };
 		942145FD226556DD00641D37 /* NextEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FC226556DD00641D37 /* NextEventsViewController.swift */; };
 		944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944C0D9B2266135F000C5C13 /* Colors.xcassets */; };
+		944C0D9E226A4351000C5C13 /* MyActivityBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +49,6 @@
 /* Begin PBXFileReference section */
 		942145A8225B678900641D37 /* communityLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = communityLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942145AB225B678900641D37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		942145AD225B678900641D37 /* MyActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivitiesVC.swift; sourceTree = "<group>"; };
 		942145AF225B678900641D37 /* MyEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsVC.swift; sourceTree = "<group>"; };
 		942145B2225B678900641D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		942145B4225B678B00641D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,13 +67,12 @@
 		942145E6226071C400641D37 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
 		942145E82260720500641D37 /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		942145EA226077FF00641D37 /* CategoryEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEventsVC.swift; sourceTree = "<group>"; };
-		942145EC2260833400641D37 /* NextEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventView.swift; sourceTree = "<group>"; };
-		942145EE226085B200641D37 /* NextEventView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextEventView.xib; sourceTree = "<group>"; };
 		942145F02260978300641D37 /* MyEventsCellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsCellVC.swift; sourceTree = "<group>"; };
 		942145F222609BC900641D37 /* MyEventsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableVC.swift; sourceTree = "<group>"; };
 		942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		942145FC226556DD00641D37 /* NextEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventsViewController.swift; sourceTree = "<group>"; };
 		944C0D9B2266135F000C5C13 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,16 +125,14 @@
 			children = (
 				942145B1225B678900641D37 /* Main.storyboard */,
 				942145DE225F93CB00641D37 /* launcherPageVC.swift */,
-				942145AD225B678900641D37 /* MyActivitiesVC.swift */,
 				942145AF225B678900641D37 /* MyEventsVC.swift */,
 				942145FC226556DD00641D37 /* NextEventsViewController.swift */,
 				942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */,
 				942145F222609BC900641D37 /* MyEventsTableVC.swift */,
 				942145F02260978300641D37 /* MyEventsCellVC.swift */,
 				942145E82260720500641D37 /* EventVC.swift */,
-				942145EC2260833400641D37 /* NextEventView.swift */,
-				942145EE226085B200641D37 /* NextEventView.xib */,
 				942145E02260690900641D37 /* Event.swift */,
+				944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */,
 				942145E222606D1900641D37 /* Category.swift */,
 				942145E42260709600641D37 /* SwiftGif.swift */,
 				942145EA226077FF00641D37 /* CategoryEventsVC.swift */,
@@ -277,7 +271,6 @@
 				944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */,
 				942145B8225B678B00641D37 /* LaunchScreen.storyboard in Resources */,
 				942145B5225B678B00641D37 /* Assets.xcassets in Resources */,
-				942145EF226085B200641D37 /* NextEventView.xib in Resources */,
 				942145B3225B678900641D37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,8 +303,7 @@
 				942145E52260709600641D37 /* SwiftGif.swift in Sources */,
 				942145F322609BC900641D37 /* MyEventsTableVC.swift in Sources */,
 				942145AC225B678900641D37 /* AppDelegate.swift in Sources */,
-				942145ED2260833400641D37 /* NextEventView.swift in Sources */,
-				942145AE225B678900641D37 /* MyActivitiesVC.swift in Sources */,
+				944C0D9E226A4351000C5C13 /* MyActivityBackgroundView.swift in Sources */,
 				942145EB226077FF00641D37 /* CategoryEventsVC.swift in Sources */,
 				942145DF225F93CB00641D37 /* launcherPageVC.swift in Sources */,
 				942145E12260690900641D37 /* Event.swift in Sources */,

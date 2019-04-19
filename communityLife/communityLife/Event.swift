@@ -62,18 +62,28 @@ class Event: NSObject
     
     static func fetchEvents() -> [Event]
     {
-        return [Event(eventDate: "20/04/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball")!, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1, topicName: "Soccer ⚽️", needsTickets: true , startColor: UIColor(named: "lightBlue")!, endColor: UIColor(named: "purple")! )!,
-                
-            Event(eventDate: "21/04/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "6.30pm", descriptionString: "The Eagles Concert", eventImage: UIImage(named: "TheEagles")!, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true , startColor: UIColor(named: "purple")!, endColor: UIColor(named: "pink")! )!,
+        return [
+    
+
             
-            Event(eventDate: "23/04/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "7.30pm", descriptionString: "Elton John Concert", eventImage: UIImage(named: "EltonJ")!, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true, startColor: UIColor(named: "pink")!, endColor: UIColor(named: "red")! )!,
-            
-            Event(eventDate: "20/04/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball")!, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1, topicName: "Soccer ⚽️", needsTickets: true , startColor: UIColor(named: "red")!, endColor: UIColor(named: "yellow")! )!,
-            
-            Event(eventDate: "21/04/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "6.30pm", descriptionString: "The Eagles Concert", eventImage: UIImage(named: "TheEagles")!, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true , startColor: UIColor(named: "orange")!, endColor: UIColor(named: "yellow")! )!,
-            
-            Event(eventDate: "23/04/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "7.30pm", descriptionString: "Elton John Concert", eventImage: UIImage(named: "EltonJ")!, attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music 🎸", needsTickets: true, startColor: UIColor(named: "yellow")!, endColor: UIColor(named: "green")! )!
-            
+        Event(eventDate: "01/06/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "8.30pm", descriptionString: "Ireland vs Gibraltar", eventImage: UIImage(named: "IrelandFootball"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1, topicName: "Soccer", needsTickets: true,startColor: UIColor(named: "lightBlue")!, endColor: UIColor(named: "purple")! )!,
+        
+        Event(eventDate: "02/06/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "8.00pm", descriptionString: "Rolling Stones Concert", eventImage: UIImage(named: "RollingStone"), attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music", needsTickets: true,startColor: UIColor(named: "pink")!, endColor: UIColor(named: "purple")! )!,
+        
+        Event(eventDate: "03/06/2019", locationShort: "Thomond Park", locationLong: "Thomond Park, Limerick", time: "5.30pm", descriptionString: "Munster vs Ospreys", eventImage: UIImage(named: "MunsterRugby"), attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2, topicName: "Rugby",needsTickets: true,startColor: UIColor(named: "pink")!, endColor: UIColor(named: "red")! )!,
+        
+        Event(eventDate: "04/06/2019", locationShort: "UCD Campus", locationLong: "UCD Campus, Dublin", time: "1.30pm", descriptionString: "UCD vs Shamrock Rovers", eventImage: UIImage(named: "UCD"), attendingBool: false, wheelBool: true, toiletFacBool: false, parkBool: true, topicID: 1,topicName: "Soccer", needsTickets: true,startColor: UIColor(named: "yellow")!, endColor: UIColor(named: "red")! )!,
+        
+        Event(eventDate: "05/06/2019", locationShort: "UCD Campus", locationLong: "UCD Campus, Dublin", time: "1.00pm", descriptionString: "Dundrum Special Olympics Blitz", eventImage: UIImage(named: "specialOly"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 1,topicName: "Sports", needsTickets: false,startColor: UIColor(named: "yellow")!, endColor: UIColor(named: "orange")! )!,
+        
+        Event(eventDate: "06/06/2019", locationShort: "Aviva Stadium", locationLong: "Aviva Stadium, Dublin", time: "4.00pm", descriptionString: "Ireland vs New Zealand", eventImage: UIImage(named: "IrelandRugby"), attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2,topicName: "Rugby", needsTickets: true,startColor: UIColor(named: "yellow")!, endColor: UIColor(named: "green")! )!,
+        
+        Event(eventDate: "07/06/2019", locationShort: "RDS Donnybrook", locationLong: "RDS Donnybrook, Dublin", time: "2.30pm", descriptionString: "Leinster vs Edinburgh", eventImage: UIImage(named: "LeinsterRugby"), attendingBool: false, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 2, topicName: "Rugby", needsTickets: true,startColor: UIColor(named: "lightBlue")!, endColor: UIColor(named: "purple")! )!,
+        
+        
+        Event(eventDate: "08/06/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "6.30pm", descriptionString: "The Eagles Concert", eventImage: UIImage(named: "TheEagles"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music", needsTickets: true,startColor: UIColor(named: "pink")!, endColor: UIColor(named: "purple")! )!,
+        
+        Event(eventDate: "09/06/2019", locationShort: "3Arena", locationLong: "3Arena, Dublin", time: "7.30pm", descriptionString: "Elton John Concert", eventImage: UIImage(named: "EltonJ"), attendingBool: true, wheelBool: true, toiletFacBool: true, parkBool: true, topicID: 3,topicName: "Music", needsTickets: true,startColor: UIColor(named: "pink")!, endColor: UIColor(named: "red")! )!
             
         ]
     }

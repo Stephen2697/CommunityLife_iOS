@@ -10,7 +10,12 @@ import UIKit
 
 class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     
+    @IBOutlet weak var upcomingEvent: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var todayDateLabel: UILabel!
+    @IBOutlet weak var upcomingViewTitle: UILabel!
+    @IBOutlet weak var viewTitle: UILabel!
+    
     var eventItems = Event.fetchEvents()
     let cellScaling : CGFloat = 0.6
     var index:Int = 0
@@ -18,7 +23,10 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
+        styleUpcomingEventView()
+        addShadow(LabelToShadow: upcomingViewTitle)
+        addShadow(LabelToShadow: todayDateLabel)
+        addShadow(LabelToShadow: viewTitle)
         collectionView?.dataSource = self
         collectionView?.delegate = self
         
@@ -27,7 +35,15 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -66,6 +82,30 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
             fatalError("Invalid Segue Identifier Calling: \(String(describing: segue.identifier))")
         }
     }
+    
+    private func styleUpcomingEventView()
+    {
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = upcomingEvent.bounds
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [UIColor(named: "lightRed")?.cgColor as Any, UIColor(named: "red")?.cgColor as Any]
+        
+        upcomingEvent.layer.insertSublayer(gradientLayer, at: 0)
+        
+    }
+    
+    func addShadow(LabelToShadow: UILabel) {
+        
+        LabelToShadow.layer.shadowColor = UIColor.black.cgColor
+        LabelToShadow.layer.shadowRadius = 3.0
+        LabelToShadow.layer.shadowOpacity = 0.5
+        LabelToShadow.layer.shadowOffset = CGSize(width: 0, height: 0)
+        LabelToShadow.layer.masksToBounds = false
+
+    }
+    
 }
 
 
@@ -92,8 +132,11 @@ extension NextEventsViewController : UICollectionViewDataSource
         
         cell.clipsToBounds = false
         cell.layer.cornerRadius = 12.0
-        cell.layer.borderColor = UIColor.white.cgColor
-        cell.layer.borderWidth = 2
+//        cell.layer.borderColor = UIColor.white.cgColor
+//        cell.layer.borderWidth = 2
+        cell.layer.shadowRadius = 1.5
+        cell.layer.shadowOpacity = 0.6
+        cell.layer.shadowOffset = CGSize(width: -1, height: 1)
         
         cell.EventLabel.text = eventItems[indexPath.item].descriptionString
         cell.LocationLabel.text = eventItems[indexPath.item].locationLong
@@ -111,15 +154,19 @@ extension NextEventsViewController : UICollectionViewDataSource
         gradientLayer.colors = [eventItems[indexPath.item].startColor.cgColor as Any, eventItems[indexPath.item].endColor.cgColor as Any]
 
         gradientLayer.cornerRadius = 12.0
-        gradientLayer.borderColor = UIColor.white.cgColor
-        gradientLayer.borderWidth = 2
+//        gradientLayer.borderColor = UIColor.white.cgColor
+//        gradientLayer.borderWidth = 2
 
         cell.layer.insertSublayer(gradientLayer, at: 0)
+        
+        addShadow(LabelToShadow: cell.DateLabel)
+        addShadow(LabelToShadow: cell.EventLabel)
+        addShadow(LabelToShadow: cell.LocationLabel)
 
         return cell
     }
     
-
+    
     
 //    func gradient(frame:CGRect, startColor: UIColor, endColor: UIColor) -> CAGradientLayer {
 //        var gradientLayer = CAGradientLayer()

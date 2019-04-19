@@ -44,6 +44,7 @@ class EventVC: UIViewController, UINavigationControllerDelegate {
         AccessWCFacilityIcon.image = UIImage(named: "Toilet")
         PKAccessibleIcon.image = UIImage(named: "Parking")
         
+        
         if ToDisplayEventItem?.needsTickets == true
         {
             ticketLabel.text = "This Event Requires Tickets 🎟"
