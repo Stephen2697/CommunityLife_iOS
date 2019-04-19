@@ -98,8 +98,6 @@ extension NextEventsViewController : UICollectionViewDataSource
         cell.EventLabel.text = eventItems[indexPath.item].descriptionString
         cell.LocationLabel.text = eventItems[indexPath.item].locationLong
         cell.DateLabel.text = "\(eventItems[indexPath.item].time), \(eventItems[indexPath.item].eventDate)"
-  
-        print("\n\n\nNumber of Layers: \(cell.layer.sublayers?.count ?? 0)\n\n-------------------------------\n\n")
         
         var gradientLayer = CAGradientLayer()
 
