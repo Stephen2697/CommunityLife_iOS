@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class CategoryInfoViewController: UIViewController, UICollectionViewDelegate {
     
     
@@ -14,6 +15,7 @@ class CategoryInfoViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var GifImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+
     var eventItems = Event.fetchEvents()
     
     override func viewDidLoad()
@@ -23,7 +25,7 @@ class CategoryInfoViewController: UIViewController, UICollectionViewDelegate {
         collectionView?.dataSource = self
         collectionView?.delegate = self
         
-        let gifURL4 = UIImage.gif(url: "https://media.giphy.com/media/j1gDGxFWrAaRbzbMx5/giphy.gif")
+        let gifURL4 = UIImage.gif(url: "https://media.giphy.com/media/TgMz5yQqqB3VrpMWP8/200w_d.gif")
 
         GifImage.image = gifURL4
         
@@ -49,6 +51,11 @@ class CategoryInfoViewController: UIViewController, UICollectionViewDelegate {
         
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        let grabRefToNavigationController = navigationController
+        grabRefToNavigationController?.popViewController(animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

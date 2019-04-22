@@ -101,22 +101,34 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C69-Mb-udZ">
-                                <rect key="frame" x="190" y="342" width="175" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rugbyCat" translatesAutoresizingMaskIntoConstraints="NO" id="vR7-Gf-sTr">
+                                <rect key="frame" x="16" y="372" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-X3-hKO">
-                                <rect key="frame" x="190" y="530" width="175" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footballCat" translatesAutoresizingMaskIntoConstraints="NO" id="C69-Mb-udZ">
+                                <rect key="frame" x="209" y="372" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vR7-Gf-sTr">
-                                <rect key="frame" x="10" y="342" width="175" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guitarCat" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-Br-vOY">
+                                <rect key="frame" x="16" y="535" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-Br-vOY">
-                                <rect key="frame" x="10" y="530" width="175" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addCat" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-X3-hKO">
+                                <rect key="frame" x="209" y="535" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-mo-Ye2">
+                                <rect key="frame" x="15" y="333" width="345" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-iw-mli">
+                                <rect key="frame" x="16" y="372" width="343" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="toCatPage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rgg-aj-kcm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.53338409549768495" green="0.44311094214056185" blue="0.87978005410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -125,15 +137,12 @@
                     <navigationItem key="navigationItem" title="My Activities 🚀" id="nyM-YO-gL0"/>
                     <connections>
                         <outlet property="collectionView" destination="A71-7j-MdU" id="rw3-Iz-sTV"/>
-                        <outlet property="gif2" destination="C69-Mb-udZ" id="b1b-mq-MoM"/>
-                        <outlet property="gif3" destination="oDh-Br-vOY" id="A1y-Zv-rZ5"/>
-                        <outlet property="gif4" destination="2ey-X3-hKO" id="nc1-1I-smy"/>
                         <outlet property="horizontalLine" destination="Dgm-2H-RXC" id="GhM-Jc-2Ao"/>
-                        <outlet property="rugbytestGif" destination="vR7-Gf-sTr" id="GYa-9p-86h"/>
                         <outlet property="todayDateLabel" destination="yUx-dy-M5v" id="YJL-Lf-b0d"/>
                         <outlet property="upcomingEvent" destination="jKC-OF-BIe" id="Adj-26-xQP"/>
                         <outlet property="upcomingViewTitle" destination="h82-Fn-9DX" id="SpV-XR-wr2"/>
                         <outlet property="viewTitle" destination="aEz-oh-JOi" id="O4p-Cz-Tmq"/>
+                        <segue destination="2yZ-7F-ljS" kind="show" identifier="toCatPage" id="FkO-eN-BC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -664,6 +673,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="red"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="2yZ-7F-ljS" eventType="touchUpInside" id="QHO-bT-Sgd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -691,7 +703,11 @@
     </scenes>
     <resources>
         <image name="App1024" width="161" height="161"/>
+        <image name="addCat" width="80.489082336425781" height="80.489082336425781"/>
         <image name="first" width="30" height="30"/>
+        <image name="footballCat" width="80.489082336425781" height="80.489082336425781"/>
+        <image name="guitarCat" width="80.489082336425781" height="80.489082336425781"/>
+        <image name="rugbyCat" width="80.489082336425781" height="80.489082336425781"/>
         <image name="second" width="30" height="30"/>
         <namedColor name="lightRed">
             <color red="0.8784313725490196" green="0.19215686274509805" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -705,7 +721,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Y52-tF-aaf"/>
-        <segue reference="DnH-h0-8nq"/>
+        <segue reference="IQ4-b9-ifS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.87716564119999996" green="0.01331189114" blue="0.28797959109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
