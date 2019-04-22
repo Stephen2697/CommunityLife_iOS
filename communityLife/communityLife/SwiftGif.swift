@@ -1,10 +1,7 @@
 //
 //  SwiftGif.swift
 //  communityLife
-//
-//  Created by Stephen Alger on 12/04/2019.
-//  Copyright © 2019 Stephen Alger. All rights reserved.
-//
+
 
 import UIKit
 import ImageIO

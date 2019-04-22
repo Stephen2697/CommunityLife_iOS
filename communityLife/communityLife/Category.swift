@@ -32,6 +32,20 @@ class Category: NSObject
         
     }//end initialisation
     
+    static func fetchEvents() -> [Category]
+    {
+        return [
+            
+            
+            
+            Category(topicID: "0", topicName: "Rugby", topicImageVisual: UIImage.gif(url: "https://makeagif.com/i/AP39Mi"))!
+            
+        
+            
+        ]
+    }
+    
+    
     
 } //end class specifier
 

@@ -17,7 +17,13 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     @IBOutlet weak var viewTitle: UILabel!
     @IBOutlet weak var horizontalLine: UIView!
     
+    @IBOutlet weak var rugbytestGif: UIImageView!
+    @IBOutlet weak var gif2: UIImageView!
+    @IBOutlet weak var gif3: UIImageView!
+    @IBOutlet weak var gif4: UIImageView!
+    
     var eventItems = Event.fetchEvents()
+//    var categoryItems = Category.fetchEvents()
     
     override func viewDidLoad()
     {
@@ -32,6 +38,30 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
         upcomingViewTitle.textColor = UIColor.white
         viewTitle.textColor = UIColor.white
         horizontalLine.backgroundColor = UIColor.white
+        
+        
+        let gifURL = UIImage.gif(url: "https://thumbs.gfycat.com/AromaticAgedAfricanwildcat-size_restricted.gif")
+        let gifURL2 = UIImage.gif(url: "https://thumbs.gfycat.com/SickRichDungbeetle-size_restricted.gif")
+        let gifURL3 = UIImage.gif(url: "https://thumbs.gfycat.com/WarmDisloyalJay-size_restricted.gif")
+        let gifURL4 = UIImage.gif(url: "https://media.giphy.com/media/j1gDGxFWrAaRbzbMx5/giphy.gif")
+        
+    
+        
+        rugbytestGif.image = gifURL
+        rugbytestGif.clipsToBounds = true
+        rugbytestGif.layer.cornerRadius = 12.0
+        
+        gif2.image = gifURL2
+        gif2.clipsToBounds = true
+        gif2.layer.cornerRadius = 12.0
+        
+        gif3.image = gifURL3
+        gif3.clipsToBounds = true
+        gif3.layer.cornerRadius = 12.0
+        
+        gif4.image = gifURL4
+        gif4.clipsToBounds = true
+        gif4.layer.cornerRadius = 12.0
         
     }
     

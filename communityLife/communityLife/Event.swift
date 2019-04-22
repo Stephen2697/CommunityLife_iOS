@@ -60,6 +60,7 @@ class Event: NSObject
         
     }//end initialisation
     
+    //Function on class to return array of mock event objects 
     static func fetchEvents() -> [Event]
     {
         return [

@@ -27,6 +27,7 @@
 		942145FD226556DD00641D37 /* NextEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FC226556DD00641D37 /* NextEventsViewController.swift */; };
 		944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944C0D9B2266135F000C5C13 /* Colors.xcassets */; };
 		944C0D9E226A4351000C5C13 /* MyActivityBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */; };
+		944C0DA0226DED87000C5C13 /* CategoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C0D9F226DED87000C5C13 /* CategoryInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		942145FC226556DD00641D37 /* NextEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventsViewController.swift; sourceTree = "<group>"; };
 		944C0D9B2266135F000C5C13 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityBackgroundView.swift; sourceTree = "<group>"; };
+		944C0D9F226DED87000C5C13 /* CategoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				942145DE225F93CB00641D37 /* launcherPageVC.swift */,
 				942145AF225B678900641D37 /* MyEventsVC.swift */,
 				942145FC226556DD00641D37 /* NextEventsViewController.swift */,
+				944C0D9F226DED87000C5C13 /* CategoryInfoViewController.swift */,
 				942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */,
 				942145F222609BC900641D37 /* MyEventsTableVC.swift */,
 				942145F02260978300641D37 /* MyEventsCellVC.swift */,
@@ -308,6 +311,7 @@
 				942145DF225F93CB00641D37 /* launcherPageVC.swift in Sources */,
 				942145E12260690900641D37 /* Event.swift in Sources */,
 				942145E7226071C400641D37 /* AddCategoryVC.swift in Sources */,
+				944C0DA0226DED87000C5C13 /* CategoryInfoViewController.swift in Sources */,
 				942145E322606D1900641D37 /* Category.swift in Sources */,
 				942145F12260978300641D37 /* MyEventsCellVC.swift in Sources */,
 			);
