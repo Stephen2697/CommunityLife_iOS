@@ -15,19 +15,20 @@ class Category: NSObject
     
     //MARK: Food Variables
     //topicID, topicImageVisual, topicGifVisual, topicName
-    var topicID: String
+    
     var topicName: String
-    var topicImageVisual: UIImage
+    var topicDescription: String
+    var topicImageURL: String
    
     
     //MARK: Initialisation
-    init?(topicID: String, topicName: String, topicImageVisual: UIImage?)
+    init?(topicDescription: String, topicName: String, topicImageURL: String)
     {
         
         
-        self.topicID = topicID //get time
+        self.topicDescription = topicDescription //get time
         self.topicName = topicName
-        self.topicImageVisual = topicImageVisual!
+        self.topicImageURL = topicImageURL
     
         
     }//end initialisation
@@ -38,7 +39,7 @@ class Category: NSObject
             
             
             
-            Category(topicID: "0", topicName: "Rugby", topicImageVisual: UIImage.gif(url: "https://makeagif.com/i/AP39Mi"))!
+            Category(topicDescription: "Rugby is a sport.....", topicName: "Rugby", topicImageURL: "https://makeagif.com/i/AP39Mi")!
             
         
             

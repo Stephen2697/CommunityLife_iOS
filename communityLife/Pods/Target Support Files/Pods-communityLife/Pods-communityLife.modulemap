@@ -1,0 +1,6 @@
+framework module Pods_communityLife {
+  umbrella header "Pods-communityLife-umbrella.h"
+
+  export *
+  module * { export * }
+}

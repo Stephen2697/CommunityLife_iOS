@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class NextEventsViewController: UIViewController,UICollectionViewDelegate {
     
@@ -28,8 +30,10 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
         addShadow(LabelToShadow: upcomingViewTitle)
         addShadow(LabelToShadow: todayDateLabel)
         addShadow(LabelToShadow: viewTitle)
+        
         collectionView?.dataSource = self
         collectionView?.delegate = self
+        
         todayDateLabel.textColor = UIColor.white.withAlphaComponent(0.5)
         upcomingViewTitle.textColor = UIColor.white
         viewTitle.textColor = UIColor.white
@@ -38,9 +42,58 @@ class NextEventsViewController: UIViewController,UICollectionViewDelegate {
         
         //let gifURL = UIImage.gif(url: "https://thumbs.gfycat.com/AromaticAgedAfricanwildcat-size_restricted.gif")
         
-        
+        //uploadToFirebase() //-- called once to populate firebase with sample data
     }
     
+    //function to upload object array event[] to firebase - implemented to populate firebase with sample data - not to be included in launch product
+    private func uploadToFirebase() {
+        
+        let ref = Database.database().reference()
+
+        for event in eventItems {
+            
+            //assign random UID for image
+            let imageName = NSUUID().uuidString
+            
+            //get Firebase storage reference location
+            let storageRef = Storage.storage().reference().child("event_images").child("\(imageName).png")
+            
+            //prepare data upload from UIImage to data
+            if let uploadData = event.eventImage.pngData() {
+                
+                //perform data put to firebase
+                storageRef.putData(uploadData, metadata: nil, completion: {
+                    (_, err) in
+
+                    if let error = err {
+                        print("\n***Put Failed - \(error)****\n")
+                        return
+                    }
+                    
+                    //process of getting URL location
+                    storageRef.downloadURL(completion: {
+                        (url, err) in
+                        
+                        if let error = err {
+                            print("\n***URL Failed \(error)****\n")
+                            return
+                        }
+
+                        guard let url = url else { return }
+                        
+                        //structure new entry into firebase db
+                        let valueString = ["eventDate": "\(event.eventDate)", "locationShort": "\(event.locationShort)", "locationLong": "\(event.locationLong)", "time": "\(event.time)", "descriptionString": "\(event.descriptionString)", "eventImage": "\(url.absoluteString)", "attendingBool": "\(event.attendingBool)", "wheelBool": "\(event.wheelBool)", "toiletFacBool": "\(event.toiletFacBool)", "parkBool": "\(event.parkBool)", "topicID": "\(event.topicID)","topicName": "\(event.topicName)", "needsTickets": "\(event.needsTickets)","startColor": "\(event.startColor)", "endColor": "\(event.endColor)"]
+
+                        //perform database addition with random id for child
+                        ref.childByAutoId().setValue(valueString)
+                    })//end downloadURL
+
+                })//end putData
+            }//end if
+            
+            
+        }
+    }
 
     
     @IBAction func toCatPage(_ sender: Any) {
@@ -156,8 +209,7 @@ extension NextEventsViewController : UICollectionViewDataSource
         
         cell.clipsToBounds = false
         cell.layer.cornerRadius = 12.0
-//        cell.layer.borderColor = UIColor.white.cgColor
-//        cell.layer.borderWidth = 2
+
         cell.layer.shadowRadius = 1.5
         cell.layer.shadowOpacity = 0.6
         cell.layer.shadowOffset = CGSize(width: -1, height: 1)
@@ -178,8 +230,6 @@ extension NextEventsViewController : UICollectionViewDataSource
         gradientLayer.colors = [eventItems[indexPath.item].startColor.cgColor as Any, eventItems[indexPath.item].endColor.cgColor as Any]
 
         gradientLayer.cornerRadius = 12.0
-//        gradientLayer.borderColor = UIColor.white.cgColor
-//        gradientLayer.borderWidth = 2
 
         cell.layer.insertSublayer(gradientLayer, at: 0)
         
@@ -189,27 +239,6 @@ extension NextEventsViewController : UICollectionViewDataSource
 
         return cell
     }
-    
-    
-    
-//    func gradient(frame:CGRect, startColor: UIColor, endColor: UIColor) -> CAGradientLayer {
-//        var gradientLayer = CAGradientLayer()
-//
-//        if let existingLayer = (layer.sublayers?.compactMap { $0 as? CAGradientLayer })?.first {
-//            gradientLayer = existingLayer
-//            print("***top layer exists\n**")
-//        }
-//
-//        layer.frame = frame
-//        layer.startPoint = CGPoint(x: 0, y: 0)
-//        layer.endPoint = CGPoint(x: 1, y: 1)
-//
-//        layer.colors = [startColor.cgColor as Any, endColor.cgColor as Any]
-//        layer.cornerRadius = 12.0
-//        layer.borderColor = UIColor.white.cgColor
-//        layer.borderWidth = 2
-//        return layer
-//    }
     
 }
 

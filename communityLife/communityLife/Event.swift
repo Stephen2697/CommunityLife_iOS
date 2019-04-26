@@ -12,7 +12,6 @@ import os.log
 class Event: NSObject
 {
     
-    
     //MARK: Food Variables
     //locationShort,locationLong, time, goingbool, descriptionString, photo, gif, topicID, wheelBool, parkBool, toiletFacBool
     var eventDate: String

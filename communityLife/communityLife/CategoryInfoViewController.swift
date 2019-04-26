@@ -25,7 +25,8 @@ class CategoryInfoViewController: UIViewController, UICollectionViewDelegate {
         collectionView?.dataSource = self
         collectionView?.delegate = self
         
-        let gifURL4 = UIImage.gif(url: "https://media.giphy.com/media/TgMz5yQqqB3VrpMWP8/200w_d.gif")
+        let gifURL4 = UIImage.gif(name: "source")
+        //let gifURL4 = UIImage.gif(url: "https://media.giphy.com/media/j1gDGxFWrAaRbzbMx5/200w_d.gif)
 
         GifImage.image = gifURL4
         
