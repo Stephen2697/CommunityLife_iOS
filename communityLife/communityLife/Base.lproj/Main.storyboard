@@ -67,16 +67,16 @@
                                                 </view>
                                                 <color key="backgroundColor" name="yellow"/>
                                                 <connections>
-                                                    <outlet property="DateLabel" destination="5ge-Gi-A68" id="mep-rE-Jak"/>
-                                                    <outlet property="EventLabel" destination="aSg-Lk-w1g" id="nqK-91-8XE"/>
-                                                    <outlet property="LocationLabel" destination="QRI-1V-nH6" id="1Cy-Ww-2L1"/>
+                                                    <outlet property="DateLabel" destination="5ge-Gi-A68" id="w0K-J5-b56"/>
+                                                    <outlet property="EventLabel" destination="aSg-Lk-w1g" id="glK-ff-tB0"/>
+                                                    <outlet property="LocationLabel" destination="QRI-1V-nH6" id="e0v-Sk-1rQ"/>
                                                     <segue destination="NHg-9w-ow5" kind="show" identifier="ShowDetailNextEvent" id="IQ4-b9-ifS"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friday, April 19th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUx-dy-M5v">
-                                        <rect key="frame" x="15" y="53" width="139" height="21"/>
+                                        <rect key="frame" x="15" y="53" width="345" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="highlightedColor"/>
@@ -102,19 +102,19 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rugbyCat" translatesAutoresizingMaskIntoConstraints="NO" id="vR7-Gf-sTr">
-                                <rect key="frame" x="16" y="372" width="150" height="150"/>
+                                <rect key="frame" x="16" y="342" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footballCat" translatesAutoresizingMaskIntoConstraints="NO" id="C69-Mb-udZ">
-                                <rect key="frame" x="209" y="372" width="150" height="150"/>
+                                <rect key="frame" x="209" y="342" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guitarCat" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-Br-vOY">
-                                <rect key="frame" x="16" y="535" width="150" height="150"/>
+                                <rect key="frame" x="16" y="534" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addCat" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-X3-hKO">
-                                <rect key="frame" x="209" y="535" width="150" height="150"/>
+                                <rect key="frame" x="208" y="534" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-mo-Ye2">
@@ -122,11 +122,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-iw-mli">
-                                <rect key="frame" x="16" y="372" width="343" height="340"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guitar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-UW-Ebd">
+                                <rect key="frame" x="61" y="692" width="61" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSg-pc-7eL">
+                                <rect key="frame" x="249" y="500" width="70" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY3-eV-Eme">
+                                <rect key="frame" x="236" y="692" width="96" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rugby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teM-qY-b5n">
+                                <rect key="frame" x="59" y="500" width="64" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGJ-Oi-c1K">
+                                <rect key="frame" x="17" y="337" width="343" height="392"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="toCatPage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rgg-aj-kcm"/>
+                                    <action selector="toCatPage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ze6-Ai-Plp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,12 +164,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Activities 🚀" id="nyM-YO-gL0"/>
                     <connections>
-                        <outlet property="collectionView" destination="A71-7j-MdU" id="rw3-Iz-sTV"/>
-                        <outlet property="horizontalLine" destination="Dgm-2H-RXC" id="GhM-Jc-2Ao"/>
-                        <outlet property="todayDateLabel" destination="yUx-dy-M5v" id="YJL-Lf-b0d"/>
-                        <outlet property="upcomingEvent" destination="jKC-OF-BIe" id="Adj-26-xQP"/>
-                        <outlet property="upcomingViewTitle" destination="h82-Fn-9DX" id="SpV-XR-wr2"/>
-                        <outlet property="viewTitle" destination="aEz-oh-JOi" id="O4p-Cz-Tmq"/>
+                        <outlet property="collectionView" destination="A71-7j-MdU" id="Pbx-fJ-OuD"/>
+                        <outlet property="horizontalLine" destination="Dgm-2H-RXC" id="lyA-A5-Dzg"/>
+                        <outlet property="imageTest" destination="2ey-X3-hKO" id="1NR-JV-BfY"/>
+                        <outlet property="todayDateLabel" destination="yUx-dy-M5v" id="Qrk-hk-99f"/>
+                        <outlet property="upcomingEvent" destination="jKC-OF-BIe" id="y3B-QN-ESE"/>
+                        <outlet property="upcomingViewTitle" destination="h82-Fn-9DX" id="0ZM-9a-0hT"/>
+                        <outlet property="viewTitle" destination="aEz-oh-JOi" id="Zkc-MP-oLh"/>
                         <segue destination="2yZ-7F-ljS" kind="show" identifier="toCatPage" id="FkO-eN-BC1"/>
                     </connections>
                 </viewController>
@@ -303,6 +332,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUC-CD-fPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3998" y="436"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qjJ-WX-eOh">
+            <objects>
+                <viewController id="9bX-gz-bCE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K9f-8D-9u9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TCG-2r-Qlu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mF-hZ-yGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6082" y="436"/>
         </scene>
         <!--Add A New Category Of Interest-->
         <scene sceneID="vUJ-wR-Xep">
@@ -599,7 +643,7 @@
                                     <inset key="sectionInset" minX="15" minY="0.0" maxX="30" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="eventsCell" id="HOL-my-GCF" customClass="NextEventCollectionViewCell" customModule="communityLife" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="eventsCell" id="HOL-my-GCF" customClass="CategoryEventsViewCell" customModule="communityLife" customModuleProvider="target">
                                         <rect key="frame" x="15" y="10" width="200" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -693,7 +737,11 @@
                     <connections>
                         <outlet property="GifImage" destination="Krp-vs-WXq" id="P49-HS-4mb"/>
                         <outlet property="backButton" destination="IQE-in-mLB" id="9zh-n4-qON"/>
+                        <outlet property="catLabel" destination="ctm-xU-tcI" id="PQf-8l-wfN"/>
                         <outlet property="collectionView" destination="Vaj-yK-fT3" id="sSS-LR-eSp"/>
+                        <outlet property="defineCatTextView" destination="hS6-nS-NwM" id="vkD-4N-p3o"/>
+                        <outlet property="defineCatTitleLabel" destination="BRw-fq-Oag" id="rF7-Om-CI5"/>
+                        <outlet property="upcomingCatLabel" destination="RUX-dp-a4l" id="l4W-0U-qaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3F1-AZ-pg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
