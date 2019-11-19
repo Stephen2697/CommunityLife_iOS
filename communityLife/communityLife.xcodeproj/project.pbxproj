@@ -27,12 +27,12 @@
 		942145F322609BC900641D37 /* MyEventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145F222609BC900641D37 /* MyEventsTableVC.swift */; };
 		942145FB226551DD00641D37 /* NextEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */; };
 		942145FD226556DD00641D37 /* NextEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942145FC226556DD00641D37 /* NextEventsViewController.swift */; };
+		942763E223848D53000087D5 /* soccer.gif in Resources */ = {isa = PBXBuildFile; fileRef = 942763E023848B85000087D5 /* soccer.gif */; };
+		942763E323848D55000087D5 /* source.gif in Resources */ = {isa = PBXBuildFile; fileRef = 942763E123848B85000087D5 /* source.gif */; };
 		9443DDEA22734ECE0059B628 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9443DDE922734ECE0059B628 /* GoogleService-Info.plist */; };
 		944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944C0D9B2266135F000C5C13 /* Colors.xcassets */; };
 		944C0D9E226A4351000C5C13 /* MyActivityBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */; };
 		944C0DA0226DED87000C5C13 /* CategoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C0D9F226DED87000C5C13 /* CategoryInfoViewController.swift */; };
-		944C0DA3226E0349000C5C13 /* source.gif in Resources */ = {isa = PBXBuildFile; fileRef = 944C0DA2226E0348000C5C13 /* source.gif */; };
-		9450E1E5227C6923000F521E /* soccer.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9450E1E4227C6923000F521E /* soccer.gif */; };
 		945B4F60227B3A6300EF4E7C /* CategoryEventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B4F5F227B3A6300EF4E7C /* CategoryEventsViewCell.swift */; };
 		945B4F66227B6E3100EF4E7C /* SaveLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B4F65227B6E3100EF4E7C /* SaveLoadData.swift */; };
 /* End PBXBuildFile section */
@@ -84,12 +84,12 @@
 		942145F222609BC900641D37 /* MyEventsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableVC.swift; sourceTree = "<group>"; };
 		942145FA226551DD00641D37 /* NextEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		942145FC226556DD00641D37 /* NextEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextEventsViewController.swift; sourceTree = "<group>"; };
+		942763E023848B85000087D5 /* soccer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = soccer.gif; path = "Class Configs/soccer.gif"; sourceTree = "<group>"; };
+		942763E123848B85000087D5 /* source.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = source.gif; path = "Class Configs/source.gif"; sourceTree = "<group>"; };
 		9443DDE922734ECE0059B628 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		944C0D9B2266135F000C5C13 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		944C0D9D226A4351000C5C13 /* MyActivityBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityBackgroundView.swift; sourceTree = "<group>"; };
 		944C0D9F226DED87000C5C13 /* CategoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfoViewController.swift; sourceTree = "<group>"; };
-		944C0DA2226E0348000C5C13 /* source.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = source.gif; path = ../../../../Desktop/source.gif; sourceTree = "<group>"; };
-		9450E1E4227C6923000F521E /* soccer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = soccer.gif; path = ../../../../Desktop/soccer.gif; sourceTree = "<group>"; };
 		945B4F5F227B3A6300EF4E7C /* CategoryEventsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEventsViewCell.swift; sourceTree = "<group>"; };
 		945B4F65227B6E3100EF4E7C /* SaveLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadData.swift; sourceTree = "<group>"; };
 		A3F5797436FD7E31D27569BE /* Pods-communityLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-communityLifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-communityLifeUITests/Pods-communityLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,9 +183,9 @@
 				945B4F64227B3BE900EF4E7C /* Class Configs */,
 				942145B4225B678B00641D37 /* Assets.xcassets */,
 				944C0D9B2266135F000C5C13 /* Colors.xcassets */,
+				942763E023848B85000087D5 /* soccer.gif */,
+				942763E123848B85000087D5 /* source.gif */,
 				942145E6226071C400641D37 /* AddCategoryVC.swift */,
-				9450E1E4227C6923000F521E /* soccer.gif */,
-				944C0DA2226E0348000C5C13 /* source.gif */,
 				942145B6225B678B00641D37 /* LaunchScreen.storyboard */,
 				942145AB225B678900641D37 /* AppDelegate.swift */,
 				9443DDE922734ECE0059B628 /* GoogleService-Info.plist */,
@@ -375,13 +375,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944C0DA3226E0349000C5C13 /* source.gif in Resources */,
-				9450E1E5227C6923000F521E /* soccer.gif in Resources */,
 				944C0D9C2266135F000C5C13 /* Colors.xcassets in Resources */,
+				942763E323848D55000087D5 /* source.gif in Resources */,
 				942145B8225B678B00641D37 /* LaunchScreen.storyboard in Resources */,
 				942145B5225B678B00641D37 /* Assets.xcassets in Resources */,
 				942145B3225B678900641D37 /* Main.storyboard in Resources */,
 				9443DDEA22734ECE0059B628 /* GoogleService-Info.plist in Resources */,
+				942763E223848D53000087D5 /* soccer.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
