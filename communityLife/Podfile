@@ -16,8 +16,9 @@ target 'communityLife' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 pod 'Firebase/Core'
+pod 'FirebaseCore'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 
